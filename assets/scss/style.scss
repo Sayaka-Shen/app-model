@@ -1,0 +1,425 @@
+// FONTS
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+// MIXIN
+@mixin desktop {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+
+// RESET SCSS
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+// HEADER 
+header {
+
+    @include desktop {
+        position: relative;
+    }
+
+    .windows {
+        
+        @include desktop {
+            position: absolute;
+            background-color: rgba(46, 46, 46, 0.4);
+            top: 40%;
+            padding: 1.5rem 2rem;
+            margin-left: 2rem;
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .text {
+            display: none;
+
+            @include desktop {
+                display: block;
+            }
+
+            h2 {
+
+                @include desktop {
+                    border-bottom: 1px solid white;
+                    padding: 0 1rem 1rem 1rem;
+                    text-align: center;
+                    font-size: 2rem;
+                }
+            }
+
+            p {
+
+                @include desktop {
+                    padding: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            padding: .5rem;
+            font-size: 1.3rem;
+            background-color: rgb(0, 187, 0);
+            color: white;
+            border: 0;
+            transition: background-color .5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: rgba(0, 187, 0, .5);
+        }
+    }
+
+    .image {
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+
+    .tour {
+        position: relative;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: .5rem;
+
+        @include desktop {
+            position: absolute;
+            right: 0;
+            top: 50%;
+        }
+    }
+}
+
+// MAIN OF THE PAGE
+main {
+    // PRESENTATION SECTION
+    #presentation {
+        width: 95%;
+        margin: auto;
+        padding-bottom: 2rem;
+
+        @include desktop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 0;
+        }
+
+        .text {
+
+            @include desktop {
+                width: 60%;
+                margin-right: 1rem;
+            }
+
+            h1 {
+                font-size: 4.5rem;
+                margin-top: 4.5rem;
+            }
+        
+            h2 {
+                color: rgb(13, 188, 13);
+                font-size: 3.2rem;
+            }
+        
+            p {
+                margin: 1rem 0;
+                font-weight: 100;
+        
+                span {
+                    font-size: 2rem;
+                }
+            }
+        
+            h4 {
+                margin: 1rem 0;
+        
+                i {
+                    font-size: 1.2rem;
+                }
+        
+                .fa-android {
+                    color: green;
+                }
+        
+                .fa-apple {
+                    color: black;
+                }
+        
+                .fa-windows {
+                    color: blue;
+                }
+            }
+        
+            h3 {
+                background-color: #f1f1f1;
+                width: fit-content;
+                font-size: 1.2rem;
+                font-weight: 100;
+                margin: 2rem 0;
+                padding: .5rem 1rem;
+            }   
+        }
+    
+        .image {
+            width: 80%;
+            margin: auto;
+
+            @include desktop {
+                width: 40%;
+            }
+    
+            img {
+                width: 100%;
+            }
+        }
+    } 
+
+    // CLARITY SECTION
+    #clarity {
+        background-color: rgb(237, 237, 237);
+        padding: 5rem 1rem;
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image {
+            display: none;
+
+            @include desktop {
+                display: block;
+                width: 40%;
+                margin-right: 1rem;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .text {
+
+            @include desktop {
+                width: 60%;
+            }
+
+            h2 {
+                font-size: 4.5rem;
+            }
+    
+            h3 {
+                font-size: 3.5rem;
+                color: red;
+            }
+    
+            p {
+    
+                span {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    // FEATURES
+    #features {
+        background-color: rgba(52, 52, 52, 0.8);
+        padding: 5rem 0 4rem 0;
+
+        h2 {
+            color: white;
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+        }
+
+        .feature {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+
+            .grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 25%;
+                margin: auto;
+                padding: 1rem;
+
+                i {
+                    font-size: 4rem;
+                    margin-bottom: .8rem;
+                    color: white;
+                }
+
+                .blue {
+                    color: #2296f3;
+                }
+
+                .lightBlue {
+                    color: #17bad3;
+                }
+
+                .red {
+                    color: red;
+                }
+
+                .orange {
+                    color: orange;
+                }
+
+                .pink {
+                    color: #e81f63;
+                }
+
+                .green {
+                    color: rgb(0, 198, 0);
+                }
+
+                .lightGreen {
+                    color: #d3be0f;
+                }
+
+                .gray {
+                    color: gray;
+                }
+
+                .lightYellow {
+                    color: #fec106;
+                }
+            }
+        }
+    }
+
+    // PRICING
+    #pricing {
+        width: 98%;
+        margin: auto;
+        padding: 5rem 0;
+
+        h2 {
+            font-size: 4rem;
+            font-weight: 100;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        .cards {
+            width: 95%;
+            margin: auto;
+
+            @include desktop {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+            
+            .card {
+                margin: 3rem 0;
+                box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+
+                @include desktop {
+                    width: 49%;
+                }
+                
+                h3 {
+                    background-color: rgb(95, 95, 95);
+                    color: white;
+                    font-size: 2rem;
+                    text-align: center;
+                    padding: 2rem;
+                }
+
+                p {
+                    color: rgb(70, 70, 70);
+                    padding: 1rem;
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+                    
+                    span {
+                        color: black;
+                    }
+                }
+
+                h4 {
+                    text-align: center;
+                    padding: 1rem 0;
+                    font-size: 3rem;
+                    color: gray;
+                    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+                }
+
+                .btn {
+                    background-color: #f1f1f1;
+                    padding: 1.5rem 0;
+                    display: flex;
+                    justify-content: center;
+
+                    button {
+                        background-color: black;
+                        color: white;
+                        padding: .8rem 1.5rem;
+                        font-size: 1.2rem;
+                        border: none;
+                    }
+                }
+
+                .red {
+                    background-color: #f54337;
+                }
+            }
+        }
+    }
+}
+
+// FOOTER OF THE PAGE
+footer {
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+
+    .icon {
+        padding: 1rem;
+        
+        i {
+            font-size: 1.5rem;
+        }
+    }
+}
+
