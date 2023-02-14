@@ -5,5 +5,4 @@ During my lessons to become a web developer, I was asked to realize model and th
 ## Language Used
 
 - HTML
-- CSS
-- Javascript
+- SCSS(CSS)
